@@ -1,6 +1,6 @@
 # Blog
 
-A simple blog integration using rails
+A blog integration using ruby on rails!
 
 # LICENSE
 
