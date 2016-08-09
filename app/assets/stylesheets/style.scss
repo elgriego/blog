@@ -3,7 +3,11 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-.field {
+.text-left {
+  text-align: left;
+}
+
+.field, .actions {
   margin-top: 1.2em;
 }
 

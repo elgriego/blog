@@ -1,4 +1,6 @@
-<h1>Welcome to the blog!</h1>
+<% if user_signed_in? %>
+  <h1>Bienvenido <%= current_user.email %></h1>
+<%end%>
 <!-- <% [1,2,3,4].each do |number|%>
   <p>Numero: <%= number  %> </p>
 <%end%>
