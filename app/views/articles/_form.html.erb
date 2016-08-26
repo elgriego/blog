@@ -7,6 +7,11 @@
   <div class="field">
     <%= f.text_field :title, placeholder: "Titulo", class:"form-control"%>
   </div>
+
+  <div class="field">
+    Portada: <%= f.file_field :cover %>
+  </div>
+
   <div class="field">
     <%= f.text_area :body, placeholder: "Escribe aqui el articulo", style:"height:250px", class:"form-control"%>
   </div>
