@@ -7,6 +7,10 @@ html, body {
   text-align: left;
 }
 
+.text-center {
+  text-align: center;;
+}
+
 .field, .actions {
   margin-top: 1.2em;
 }
@@ -17,6 +21,27 @@ html, body {
 
 .red {
   color: red !important;
+}
+
+.blue {
+  color: blue !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.article-height {
+  height: 100px;
+}
+
+.background-cover {
+  background-position: center;
+  background-size: cover;
 }
 
 .form-control {

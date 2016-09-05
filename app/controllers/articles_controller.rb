@@ -1,16 +1,14 @@
 class ArticlesController < ApplicationController
-  #un tipo de "callback"
-  #before_action :valita_user, except: [:show, :index]
   before_action :authenticate_user!, except: [:show, :index]
   # before_action :set_article, except: [:index, :new, :create]
-  #o sino
-  #before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_editor!, only: [:new, :create, :update]
+  before_action :authenticate_admin!, only: [:destroy,:publish]
 
 
   #GET /articles
   def index
     # Retorna todos los articulos
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page:3).publicados
   end
 
   #GET /articles/:id
@@ -61,6 +59,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def publish
+    @article = Article.find(params[:id])
+    @article.publish!
+    redirect_to @article
+  end
+
   private
 
   def validate_user
@@ -69,6 +73,10 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title,:body,:cover, :categories)
+  end
+
+  def set_article
+    @article = Article.find(params[:id])
   end
 
 end
