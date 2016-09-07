@@ -3,6 +3,26 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+.be-big {
+  font-size: 2em;
+}
+
+.be-small {
+  font-size: 12px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-left {
   text-align: left;
 }
@@ -25,6 +45,10 @@ html, body {
 
 .blue {
   color: blue !important;
+}
+
+.grey {
+  color: #616161;
 }
 
 .relative {
@@ -88,4 +112,8 @@ a,a:visited {
 
 .large-padding {
   padding: 15px 10px;
+}
+
+.bottom-space {
+  margin-bottom: 2em;
 }
